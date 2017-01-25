@@ -1,7 +1,10 @@
+
+
 <h1>My Robots</h1>
 
 <% @robots.each do |robot| %>
   <h3>Name: <a href="/robots/<%= robot.id %>"><%= robot.name %></a></h3>
+  <img class="robo-pic" src="https://robohash.org/<%=robot.name%>" alt="robo-pic">
   <p>City: <%= robot.city %></p>
   <p>State: <%= robot.state %></p>
   <p>Department: <%= robot.department %></p>

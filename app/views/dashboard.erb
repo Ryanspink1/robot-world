@@ -1,6 +1,12 @@
-<h1>Welcome to my Robot World!</h1>
+
+<h1 class="greeting">Welcome to my Robot World!</h1>
 
 <ul>
   <li><a href="/robots">Robot Index</a></li>
   <li><a href="/robots/new">New Robot</a></li>
 </ul>
+
+<p> There are currently <%=Robot.all.count%> robots in our inventory!</p>
+<% Robot.all.each do |robot| %>
+    <p> There is 1 mechanizoid from <%=robot.city%>, <%=robot.state%> that works in <%=robot.department%>!</p>
+<% end %>
